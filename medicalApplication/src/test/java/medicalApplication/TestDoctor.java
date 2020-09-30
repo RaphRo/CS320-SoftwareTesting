@@ -11,6 +11,9 @@ import medical.com.medicalApplication.model.Doctor;
 public class TestDoctor {
 	// I have created an empty car class
 		private Doctor doctor;
+		
+		private String name = "Doctor";
+		private String id = "01234";
 
 		// The before annotation gets called before the test run
 		@Before
@@ -20,9 +23,9 @@ public class TestDoctor {
 		
 		@Test
 		public void testConstructor() {
-			String expectedName = "Doctor";
+			String expectedName = name.toString();
 			String actualName = doctor.getName();
-			String expectedId = "01234";
+			String expectedId = id.toString();
 			String actualId = doctor.getId();
 			assertTrue(expectedId.equals(actualId) && expectedName.equals(actualName));
 		}
@@ -41,6 +44,13 @@ public class TestDoctor {
 			doctor.setId(expectedValue);
 			String actualValue = doctor.getId();
 			assertTrue(expectedValue.equals(actualValue));
+		}
+		
+		@Test
+		public void testToString() {
+			String expectedValue = "Doctor Name:"+ name + " ID: "+id;
+			String actualValue = doctor.toString();
+			assertTrue(expectedValue.equals(actualValue)) ;
 		}
 
 }
