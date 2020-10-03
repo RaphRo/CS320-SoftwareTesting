@@ -8,7 +8,6 @@ import java.util.List;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.After;
 
 import medical.com.medicalApplication.model.Allergey;
 import medical.com.medicalApplication.model.MedicalRecord;
