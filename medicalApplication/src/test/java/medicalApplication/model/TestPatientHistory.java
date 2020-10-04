@@ -58,6 +58,7 @@ public class TestPatientHistory {
 		assertTrue(patientHistory.getAlergies().size() == 0 );
 	}
 
+	// TODO: Nice job finding this!
 	@Test
 	public void testAddMedicationNoTreatment() {
 		patientHistory.addMedication(medication);
